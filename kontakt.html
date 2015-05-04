@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <TITLE> BIBLIOTEKA SARAJEVO </TITLE>
 <link rel="stylesheet" type="text/css" href="kontakt.css">
+<script src="validacija.js"></script>
 </head>
 
 <body>
@@ -11,9 +12,9 @@
 <img src="bib.jpg"  class="center" alt="logo">
 
 <div class="navigacija" >
-<a  href="file:///C:/Users/Adem/Desktop/Biblioteka%20prva%20spirala/naslov.html"> NASLOVNICA </a> 
-<a href="file:///C:/Users/Adem/Desktop/Biblioteka%20prva%20spirala/tabela.html"> ADRESAR </a>
-<a href="file:///C:/Users/Adem/Desktop/Biblioteka%20prva%20spirala/linkovi.html"> LINKOVI</a>
+<a   onclick="otvoriStranicu('naslov.html')"> NASLOVNICA </a> 
+<a   onclick="otvoriStranicu('tabela.html')"> ADRESAR </a>
+<a   onclick="otvoriStranicu('linkovi.html')"> LINKOVI</a>
 </div>
 
 
@@ -36,6 +37,8 @@
             <br>
             <input types="email" name="email" size="25"class=" required" > <div>  </div>
         </div>
+       
+        
         <br>
         <div>
             Poruka: *
@@ -51,7 +54,19 @@
 		
     </form>
 
-<script src="validacija.js" type="text/javascript" charset="utf-8"></script>
+    <form onsubmit="return false;">
+<br>
+
+        Dodatna polja:<br>
+                Općina *<br>
+                <input required id="ajaxOpcina" class="hehe" type="text" name="opcina" value=""><br>
+                Mjesto *<br>
+                <input required id="ajaxMjesto" class="hehe" type="text" name="mjesto" value=""><br>
+            <input type="submit" onclick="validirajAjax();" value="Potvrdi"> <br>
+        </form>
+
+
+
 
 </body> 
 </HTML>
